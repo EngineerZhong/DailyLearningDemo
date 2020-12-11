@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.dalididilo</groupId>
+    <artifactId>nettydemo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <!-- 私有maven 管理 puyuan-iot 依赖。-->
+    <distributionManagement>
+        <repository>
+            <id>puyuan</id>
+            <url>http://192.168.1.129:8088/repository/puyuan-release/</url>
+        </repository>
+    </distributionManagement>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.intelligt.modbus/jlibmodbus -->
+        <dependency>
+            <groupId>com.intelligt.modbus</groupId>
+            <artifactId>jlibmodbus</artifactId>
+            <version>1.2.9.7</version>
+        </dependency>
+        <dependency>
+            <groupId>com.netsdk</groupId>
+            <artifactId>netsdk</artifactId>
+            <version>1.0-demo</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>25.1-jre</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>7</source>
+                    <target>7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
