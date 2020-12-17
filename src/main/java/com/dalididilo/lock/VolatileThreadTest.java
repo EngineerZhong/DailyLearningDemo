@@ -8,6 +8,8 @@ import org.junit.Test;
  * volatile 声明的变量，
  *      1、保证内存可见性。
  *      2、禁止volatile变量和普通变量重排序。
+ * 可作为"轻量级锁"使用，volatile仅仅对单个声明变量的读/写具有原子性，锁可以保证整个临界区代码的执行具有原子性。
+ *      锁比volatile强大，性能上，volatile更具有优势。
  * @description 一个线程对该声明变量改变时，其它线程对其值可立马可见。
  * @author dalididilo
  * @date 2020-12-11 16:54:25
